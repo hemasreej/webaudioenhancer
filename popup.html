@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Audio Booster</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 220px;
+    }
+    label {
+      font-size: 14px;
+    }
+    input[type=range], select {
+      width: 100%;
+      margin-top: 4px;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    .section {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Smart Audio Booster</h3>
+
+  <div class="section">
+    <label>
+      <input type="checkbox" id="enableToggle" checked />
+      Enable Enhancement
+    </label>
+  </div>
+
+  <div class="section">
+    <label for="gainRange">Gain: <span id="gainValue">2.5</span>x</label>
+    <input type="range" id="gainRange" min="1" max="5" step="0.1" value="2.5" />
+  </div>
+
+  <div class="section">
+    <label for="modeSelect">Filter Mode:</label>
+    <select id="modeSelect">
+      <option value="voice" selected>Voice</option>
+      <option value="music">Music</option>
+      <option value="bass">Bass Boost</option>
+    </select>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
